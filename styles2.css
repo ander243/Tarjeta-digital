@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(wallpaper1.png);
+}
+.contenedor1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.contenedor2 {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); /* Desenfoque de fondo */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+.contenedor2 h1 {
+    color: blueviolet;
+}
+.regresar {
+    width: 80vw;
+    background-color: red;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+a {
+    text-decoration: none;
+}

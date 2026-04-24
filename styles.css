@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(wallpaper1.png);
+    display: flex;
+    justify-content: center;
+}
+.contenido1 {
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    gap: 1rem;
+}
+h1 {
+    text-align: center;
+    color: blueviolet;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); /* Desenfoque de fondo */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 1rem;
+}
+.carrusel {
+    width: 100%;
+    overflow: hidden;
+}
+.cinta {
+    width: max-content;
+    display: flex;
+    gap: 1rem;
+    animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(((20vw + 1rem) * -7) - 1rem));
+    }
+}
+img {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+@media (max-width: 600px) {
+    .carrusel {
+        height: 60vh;
+    }
+    .cinta {
+        flex-direction: column;
+        animation: scroll 20s linear infinite;
+    }
+    img {
+        width: 80vw;
+        height: 80vw;
+    }
+    @keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(((80vw + 1rem) * -7) - 1rem));
+    }
+}
+}
+.carta {
+    height: 5rem;
+    width: auto;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.5));
+    animation: flotar 3s ease-in-out infinite;
+}
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.lumalee {
+    height: auto;
+    width: 5rem;    
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.5));
+    animation: flotarYgirar 20s linear infinite;
+}
+@keyframes flotarYgirar {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(0) rotate(180deg);
+    }
+    75% {
+        transform: translateY(10px) rotate(270deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
